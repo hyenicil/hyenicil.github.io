@@ -16,15 +16,17 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 45px;
+    padding-top: 75px;
     padding-left: 8%;
     padding-right: 8%;
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0,  .5);
 }
 
 .load{
     position: absolute;
     left: 6%; 
-    top: 85px;
+    top: 65px;
     transform: translate(-50%,-50%);
     width: 100px;
     height: 100px;
@@ -33,8 +35,8 @@ nav{
 .load hr{
     border: 0 ; 
     margin: 0; 
-    width: 25%;
-    height: 25%;
+    width: 20%;
+    height: 20%;
     border-radius:  -50%;
      position:absolute; 
     animation: spin 2s ease infinite;
@@ -84,26 +86,69 @@ nav{
     font-size: 35px;
     letter-spacing: 1px;
     cursor: pointer;
-
+    margin-top: -55px;
 }
 span{
     color: aqua;
 }
-nav ul li{
+nav ul {
+    display: flex;
+    align-items: center;
     list-style-type: none;
-    display: inline-block;
-    padding: 10px 25px;
 }
+nav ul li{
+    padding: 20px 85px; 
+    margin-top: -80px;
+}
+
 nav ul li a {
-    color: white;
+
+    color: aqua;
     text-decoration: none;
     font-weight: bold;
-    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 18px;
+    position: absolute;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: .3s;
+    padding: 5px 0;
+}
+nav ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 50%;
+    height: 2px;
+    background-color: aqua;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+nav ul li a:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 50%;
+    height: 2px;
+    background-color: aqua;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 nav ul li a:hover{
-    color: aqua;
+    color: #011627;
     transition: .4s;
 }
+nav ul li a:hover:before{
+    right: 0;
+    background-color: #ff9f1c;
+    color: #011627;
+}
+nav ul li a:hover:after{
+    left: 0;
+    background-color:  #e71d36;
+    color: #011627;
+}
+
 .btn{
     background-color: aqua;
     color: white;
@@ -113,10 +158,14 @@ nav ul li a:hover{
     padding: 10px 25px;
     border-radius: 30px;
     transition: transform .4s;
+    margin-top: -73px;
+
 
 }
 .btn:hover{
-    transform: scale(1.2);
+    transform: scale(1.15);
+    background-color: white;
+    color: black;
 }
 .content{
     position: absolute;
@@ -161,6 +210,12 @@ h1{
     font-weight: bold;
 
 }
+.newslatter form input:hover{
+    background: white;
+    color: black;
+  
+}
+
 .about{
     width:100%;
     padding: 100px 0px;
@@ -361,6 +416,7 @@ footer p:nth-child(2){
 .social a:hover{
     transform: scale(1.3);
     transition: .3s;
+    background: white;
 
 }
 
