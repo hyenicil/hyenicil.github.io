@@ -38,7 +38,7 @@ nav{
     width: 20%;
     height: 20%;
     border-radius:  -50%;
-     position:absolute; 
+    position:absolute; 
     animation: spin 2s ease infinite;
 
 }
